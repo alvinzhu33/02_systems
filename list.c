@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct node { int i; struct node *next };
+struct node { int i; struct node *next; };
 
 void print_list ( struct node *list ){
     printf("[ %s ", list.i);
@@ -27,5 +27,13 @@ struct node * free_list (struct node *list){
 }
 
 int main(){
+    struct node *try;
+    try = (struct node *)malloc(sizeof(struct node));
+    try.i = 10;
+    try.next = 0;
+
+    printf("try: ");
+    print_list(try);
+
     return 0;
 }

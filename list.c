@@ -18,6 +18,14 @@ struct node * insert_front (struct node *list, int data){
     return new;
 }
 
+struct node * free_list (struct node *list){
+    struct node *start = *list;
+    while(list.next!=0){
+        free(list.i);
+    }
+    return start;
+}
+
 int main(){
     return 0;
 }

@@ -36,15 +36,18 @@ int main(){
     try->i = 10;
     try->next = 0;
 
+    printf("\nTest initial print_list: \n");
     printf("try: ");
     print_list(try);
 
+    printf("\nTest insert_front:\n");
     int i;
     for(i=9; i>0; i--){
         try = insert_front(try, i);
         print_list(try);
     }
 
+    printf("\nTest free_list:\n");
     free_list(try);
     print_list(try);
 

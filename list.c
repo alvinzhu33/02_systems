@@ -22,7 +22,7 @@ struct node * insert_front (struct node *list, int data){
 struct node * free_list (struct node *list){
     struct node *start = list;
     struct node *nextList = malloc(sizeof(struct node));
-    while(list->next){
+    while(list){
         nextList = list->next;
         free(list);
         list = nextList;

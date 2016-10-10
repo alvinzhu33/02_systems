@@ -50,6 +50,7 @@ int main(){
     printf("\nTest free_list:\n");
     free_list(try);
     print_list(try);
+    printf("Pretty sure it works but idk why its like this...\n");
 
     return 0;
 }
